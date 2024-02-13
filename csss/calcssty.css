@@ -1,0 +1,45 @@
+        input.bbt
+            {
+                height: 70px; 
+                width: 175px; 
+                font-size: 2em;
+                color: #000;
+                background-color: #bbf;
+                border: 2px solid #fff;
+                border-radius: 15px;
+            }
+        input.sbt
+            {
+                height: 70px; 
+                width: 87.5px; 
+                font-size: 2em;
+                color: #000;
+                background-color: #ccc;
+                border: 2px solid #fff;
+                border-radius: 15px;
+            }
+        input.sbtc
+            {
+                height: 70px; 
+                width: 87.5px; 
+                font-size: 2em;
+                color: #000;
+                background-color: #cc8;
+                border: 2px solid #fff;
+                border-radius: 15px;
+            }
+        input.sbtb
+            {
+                height: 70px; 
+                width: 87.5px; 
+                font-size: 2em;
+                color: #000;
+                background-color: #bbf;
+                border: 2px solid #fff;
+                border-radius: 15px;
+            }
+        input:hover
+            {
+                background-color: #fff;
+                transition-duration: 0.2s;
+            }
