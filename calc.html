@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>计算器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://coolsigh.github.io/csss/calcssty.css">
+    <style>
+    </style>
+    <script src="https://coolsigh.github.io/jss/calcsjs.js">
+
+    </script>
+
+</head>
+<body style="background-color: #99d">
+<table align="center" style="padding: 10px; background-color: #ccc; border-radius: 20px;">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="nummessege" value="" placeholder="0"
+                       style="height: 70px; width: 350px; font-size: 2.725em; color: #000; background-color: #eee; border: 2px solid #fff; border-radius: 15px; text-align: right;" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="AC" id="AC" onclick="onclickclear()"
+                       class="bbt" />
+            </td>
+            <td>
+                <input type="button" value="←" id="bksp" onclick="onclickbackspace()"
+                       class="sbtb"/>
+            </td>
+            <td>
+                <input type="button" value="+" id="add" onclick="onclicknum('+')"
+                       class="sbtc" />
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" id="7" onclick="onclicknum(7)"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="8" id="8" onclick="onclicknum(8)"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="9" id="9" onclick="onclicknum(9)"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="-" id="sub" onclick="onclicknum('-')"
+                       class="sbtc" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="4" id="4" onclick="onclicknum(4)"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="5" id="5" onclick="onclicknum(5)"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="6" id="6" onclick="onclicknum(6)"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="×" id="*" onclick="onclicknum('*')"
+                       class="sbtc" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" id="1" onclick="onclicknum(1)"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="2" id="2" onclick="onclicknum(2)"
+                       class="sbt" />
+            <td>
+                <input type="button" value="3" id="3" onclick="onclicknum(3)"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="÷" id="division"
+                       onclick="onclicknum('/')"
+                       class="sbtc" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="0" id="0"
+                       onclick="onclicknum(0)"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="00" id="00"
+                       onclick="onclicknum('00')"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="." id="point"
+                       onclick="onclicknum('.')"
+                       class="sbt" />
+            </td>
+            <td>
+                <input type="button" value="e" id="e"
+                       onclick="onclicknum('e')"
+                       class="sbtc" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="(" id="lb"
+                       onclick="onclicknum('(')"
+                       class="sbtc" />
+            </td>
+            <td>
+                <input type="button" value=")" id="rb"
+                       onclick="onclicknum(')')"
+                       class="sbtc" />
+            </td>
+            <td colspan="2">
+                <input type="button" value="=" id="result"
+                       onclick="onclickresult()"
+                       class="bbt" />
+        </tr>
+    </table>
+    </html>

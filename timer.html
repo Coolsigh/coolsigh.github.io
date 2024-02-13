@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计时器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://coolsigh.github.io/csss/timer.css">
+    <style>
+    </style>
+    <script src="https://coolsigh.github.io/jss/timer.js">
+    </script>
+</head>
+<body style="background-color: #99d">
+
+    <div style="background-color: #ddd; border-radius: 12px; padding: 10px; width* 290px;">
+    <table align="center">
+        <tr><td colspan="3">
+            <input type="text" id="timeValue" value="0s" readonly="readonly" style="width: 270px; height: 45px; border: 2px solid #fff; border-radius: 10px; font-size: 1.725em; background-color: #ddd"></td></tr>
+        <tr><td><button type="button" id="st1" onclick="startTimer()" class="btns">开始</button><button type="button" id="st2" class="btnshd">开始</button></td><td><button type="button" onclick="stopTimer()" class="btns">暂停</button></td><td><button type="button" onclick="resetTimer()" class="btns">重置</button></td>
+    </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>! SYSTEM DIED</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #text {
+      /*      width: 800px;
+            height: 403px;   */
+            color: #fff;
+            line-height: 1.5;
+            padding: 0px 0px 0px;
+
+            text-decoration: underline;
+        }
+
+        #text::after {
+            content: "▂";
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: top;
+            font-weight: lighter;
+            animation: flicker 0.75s infinite;
+            color: #0f0;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #000;">
+    <p id="text" data-text='!
+    SYSTEM  DIED
+    
+    0x0000002c
+    
+    Software seriously damaged and probably cannot be repaired
+    
+    If you try to repair this device,   please call a supportable person to repair.
+    
+    If you really did this,    please provide these info to them:
+    
+    ***
+    
+    SYS_DIED:
+    ERROR_CODE:
+    0x0000002c
+    DESCRIPTION:
+    
+    SOFTWARE_DAMAGED:   LEVEL_10+
+    
+    ***
+    
+    Press anywhere to retry
+    
+    
+    Self OS Errorscreen Manager
+' style='color: #0f0; text-decoration: none; font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;'>
+        
+    </p>
+
+
+    <script>
+        var text = document.getElementById("text").getAttribute("data-text");
+        var index = 0;
+        var element = document.getElementById("text");
+
+        function myprint() {
+            if (index < text.length) {
+                element.innerText = element.innerText + text.charAt(index);
+                index++;
+            } else {
+                clearInterval(c);
+            }
+        }
+        var c = setInterval(myprint, 150);
+        
+        setTimeout ("location.reload()",75850)
+    </script>
+</body>
+
+</html>
