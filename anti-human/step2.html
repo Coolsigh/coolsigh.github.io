@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>反人类操作系统 - 信息收集</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="type/css" href="">
+        <style>
+            
+        </style>
+        
+        <script src="https://coolsigh.github.io/anti-human/stp2.js"></script>
+        <script>
+        </script>
+    </head>
+    
+    <body style="background-color: #999;">
+        <div style="padding: 10px; border: 0px; border-radius: 10px;background-color: #fff;" id="maind">
+            <h1 style="color: #68f; border-left: 8px solid #68f; padding: 8px;">接下来, 让我们做一些简单的信息收集</h1>
+            <hr>
+            <p>你的姓名</p>
+            <input type="text" placeholder="你的姓名..." value="你的姓名..." />
+            <p>性别</p>
+            <input type="checkbox" id="ck1" checked /><a>男</a>
+            <input type="checkbox" id="ck2" checked /><a>女</a>
+            <p>联系方式 - 电子邮件</p>
+            <input type="text" style="width: 100px;"><a>@</a><input type="text" style="width: 50px;"><select id="slct"><option>选择后缀</option><option>.txt</option><option>.png</option><option>.zip</option><option>.html</option><option>.css</option><option>.js</option><option>.exe</option><option>.jpg</option><option>.co.uk</option><option>.wav</option><option>.avi</option><option>.com</option><option>.jp</option><option>.mp4</option><option>.gif</option><option>.midi</option><option>.rm</option><option>.rmvb</option><option>.iso</option><option>.vmdk</option><option>.qcow2</option><option>.dll</option><option>.ini</option><option>.apk</option><option>.7z</option><option>.rar</option><option>.pdf</option><option>.doc</option><option>.docx</option><option>.ppt</option><option>.pptx</option><option>.xls</option><option>.xlsx</option><option>.flp</option></select>
+            <p>年龄: <a id="age">0</a></p>
+            <input type="range" id="agectrler" style="width: 250px;" value="0" /><br>
+            <input type="button" value="重置" style="padding: 10px; color: #fff; background-color: #68f; border: 0px; border-radius: 20px;" onclick="location.reload()" />
+            <input type="button" value="关闭页面" style="padding: 10px; color: #fff; background-color: #777; border: 0px; border-radius: 20px;" onclick="document.getElementById('maind').style.display='none';document.getElementById('hdnd').style.display='block';document.getElementById('hdnb').style.display='block';document.getElementById('apr').style.display='block';" />
+
+            <br><br>
+    <!--        <input type="button" id="" value="性别选择测试" onclick="checkifr()" />
+            <input type="button" value="下拉选单测试" onclick="xlxd()" /> -->
+            <!-- <input type="button" value="总测试" onclick="ckdata()" /> -->
+        </div>
+        <div id="hdnd" style="padding-bottom: 1px; display: none;"></div>
+        <table>
+        <tr><td>
+        <input type="button" id="hdnb" value="提交" style="padding: 10px; color: #fff; background-color: #68f; border: 0px; border-radius: 20px; display: none;" onclick="ckdata()" /></td>
+        <td><input type="button" id="apr" value="显示页面" style="float: right; padding: 10px; color: #fff; background-color: #777; border: 0px; border-radius: 20px; display: none;" onclick="document.getElementById('maind').style.display='block';document.getElementById('hdnd').style.display='none';document.getElementById('hdnb').style.display='none';document.getElementById('apr').style.display='none';" /></td></tr>
+        </table>
+    </body>
+
+</html>

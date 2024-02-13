@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>反人类操作系统 - 开始设置</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" type="type/css" href=""> -->
+        <style>
+            
+        </style>
+        
+        <script src="https://coolsigh.github.io/anti-human/stp4.js"></script>
+        <script>
+            function closecfm()
+                {
+                    var c = confirm ("你现在还有未保存的设置。如果你现在关闭而不保存页面，你将丢失信息。\n\n你要关闭并不保存信息吗？");
+                    if (c == true)
+                        {
+                            window.location.href='https://coolsigh.github.io/anti-human/step5.html';
+                        }
+                    else{}
+                }
+        </script>
+    </head>
+    
+    <body style="background-color: #999;">
+        <div id="maind" style="border: 2px; background-color: #ddd; border-radius: 15px; padding: 10px;"><a style="float: right; font-size: 0.25em; color: #777; text-decoration: none;" href="javascript:closecfm();">╳</a>
+            <h1 id="h" style="color: #68f; padding: 8px; border-left: 5px solid #68f;">然后，让我们为你做一些简单的设置</h1>
+            <p id="sz">这样有助于你适合你的个人习惯。</p>
+            <hr style="border: 1px solid #aaa; background-color: #aaa;">
+            <h2>站点配色</h2>
+            <input type="radio" name="cl" id="light" onclick="document.getElementById('maind').style.backgroundColor='#fff';document.body.style.backgroundColor='#999';document.getElementById('h').style.color='#68f';document.getElementById('h').style.borderLeft='5px solid #68f';" checked />明色模式<input type="radio" name="cl" id="dark" onclick="document.getElementById('maind').style.backgroundColor='#777';document.body.style.backgroundColor='#000';document.getElementById('h').style.color='#bbf';document.getElementById('h').style.borderLeft='5px solid #bbf';" />暗色模式
+            <input type="radio" name="cl" id="se" onclick="saveeye()" />护眼模式
+            <input type="radio" name="cl" id="de" onclick="dmgeye()" style="color: #f00; border: 2px solid #f00;" /><a style="color: #a00;">瞎眼模式</a>
+            <br><br>
+            <div style="border: 3px solid #f00">
+                <input type="radio" name="cl" id="depro" onclick="dmgeyeProMaxPluscc()" /><a style="color: #a00">瞎眼模式 ProMaxPlus++</a>
+            </div><br>
+            <center><input type="button" style="padding: 10px; width: 200px; color: #fff; background-color: #68f; border: 0px; border-radius: 20px;" value="不保存设置" onclick="location.reload(0);" /></center>
+        </div>
+    </body>
+
+</html>
