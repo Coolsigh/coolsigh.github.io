@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>clsh 的日记本</title>
+        <title>日记_2023.12.16</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://coolsigh.github.io/wiki/wiki2.css">
         <script>
-                var lk = 0;
+        var lk = 0;
         var str;
         var tme = 1800;
         var gdz = 0;
@@ -17,10 +17,11 @@
             }
         function check()
             {
-                if (str.value == 2679)
+                if (str.value == 2312161)
                     {
                         alert ("密钥正确.");
                         opfst();
+// 记得要添加 密码正确显示内容 函数
                     }
                 else
                     {
@@ -94,22 +95,43 @@
                 document.getElementById("pwd").style.display='none';
                 document.getElementById("bt").style.display='none';
                 document.getElementById("ff").style.display='none';
-                displaylinks();
+                displayct();
             }
-        function displaylinks()
+        function displayct()
             {
-                document.getElementById("1").style.display='block';
-                document.getElementById("2").style.display='block';
-                document.getElementById("pgnb").style.display='block';
-                document.getElementById("3").style.display='block';
-                document.getElementById("4").style.display='block';
+                document.getElementById("titl").style.display='block';
+                document.getElementById("p1").style.display='block';
+                document.getElementById("hr1").style.display='block';
+                document.getElementById("p2").style.display='block';
+                document.getElementById("bt1").style.display='block';
+                document.getElementById("p3").style.display='block';
+                document.getElementById("hr2").style.display='block';
+                document.getElementById("p4").style.display='block';
+                document.getElementById("hr3").style.display='block';
+                document.getElementById("hd").style.display='block';
+                document.getElementById("bt3").style.display='block';
+            }
+        function pwct()
+            {
+                var pw = prompt ("输入密码查看隐藏内容");
+                if (pw == 9462264)
+                    {
+                        document.getElementById("hd").innerHTML='我QQ号终于回来了 将近两年多没登录了 没有自动注销 真是让我意外*<br>点击下面按钮查看<strong>机密文本</strong>';
+                        document.getElementById("hdbt1").style.display='block';
+                        document.getElementById("qqacc").style.display='block';
+                    }
+                else
+                    {
+                        alert ("密码错误.");
+                    }
             }
         </script>
     </head>
     
     <body style="background-color: #fff;">
         <h1 style="font-size: 2.6em">Clsh Wiki</h1>
-        <div class="stickytitle"><a class="mnl">clsh 的日记本(wiki/diary/index)_Clsh wiki</a>
+        <!-- 记住更改<p></p>标签内容 -->
+        <div class="stickytitle"><a class="mnl">日记_2023.12.16(wiki/diary/diary_20231216)_Clsh Wiki</a>
         <hr>
         <ul>
             <li class="title"><a href="https://coolsigh.github.io/wiki/index.html">主页</a></li>
@@ -117,14 +139,20 @@
             <li class="title" style="float: right"><a href="https://coolsigh.github.io/wiki/about">关于</a></li>
         </ul></div>
         <p class="b">提示: 在'wiki/diary/'目录下均属于clsh的个人内容. 如要查看, 请申请clsh的同意之后再查看. <br>要获得密码, 请联系我们.<br>不欢迎直接查看源码的行为!</p>
-        <br>
-        <h2 id="pgnb" style="display: none;">共有5个页面链接在此分支下.</h2>
-        <a id="1" style="display: none;" href="https://coolsigh.github.io/wiki/diary/diary_20231214.html">日记_2023年12月14日</a>
-        <a id="2" style="display: none;" href="https://coolsigh.github.io/wiki/diary/diary_20231215.html">日记_2023年12月15日</a>
-        <a id="3" style="display: none;" href="https://coolsigh.github.io/wiki/diary/diary_20231216.html">日记_2023年12月16日</a>
-        <a id="4" style="display: none; color: #f33;" href="javascript:alert ('此链接没有链接到有效的页面.')">日记_2023年12月17日</a>
-        <a id="5" style="display: none;" href="https://coolsigh.github.io/wiki/diary/diary_20231218.html">日记_2023年12月18日</a>
-        <a id="6" style="display: none;" href="https://coolsigh.github.io/wiki/diary/diary_2023121920.html">日记_2023年12月19日至2023年12月20日</a>
+        
+        <h2 id="titl" style="display: none;">16.12, 2023  周六  晴</h2>
+        <p id="p1" style="display: none; font-size: 3em; text-align: center;">哇哈哈终于到周末了</p>
+        <hr id="hr1" style="display: none;">
+        <p id="p2" style="display: none;">早晨睡到八点半* 为什么? 见<a href="https://coolsigh.github.io/wiki/diary/diary_20231215.html">日记_20231215</a><br>要是懒得跳转的话, 点击下面的按钮</p>
+        <input type="button" id="bt1" value="显示iframe插入网页" style="display: none;" onclick="document.getElementById('ifr1').style.display='block';document.getElementById('bt1').style.display='none';alert ('已经显示iframe插入网页.');document.getElementById('bt2').style.display='block';" />
+        <input type="button" id="bt2" value="关闭iframe插入网页" style="display: none;" onclick="document.getElementById('ifr1').style.display='none';document.getElementById('bt1').style.display='block';alert ('已经关闭iframe插入网页.');document.getElementById('bt2').style.display='none';" />
+        <iframe id="ifr1" src="https://coolsigh.github.io/wiki/diary/diary_20231215.html" style="display: none; height: 600px; width: 900px;"></iframe><br>
+        <p id="p3" style="display: none;">所以... 知道了我为什么睡到这个时候吧? <del>严重失眠...</del><br><del>但是还要写作业*</del><br>昨天的<a href="https://coolsigh.github.io/wiki/diary/diary_20231215.html">日记_20231215</a>下面的两个图片 由于在freeimg图床不过审<del>审核太严格了...</del>所以我只能用postimg图床上传图片. 但是我没想到... postimg图床上传之后的图片 引用到网站里 居然... <strong>这么模糊!</strong><br>无语了</p><hr id="hr2" style="display: none;">
+        <p id="p4" style="display: none;">把手机办公软件换成了Microsoft 365 for Android 但是 我永远都想不到 老师发的文件(带有图片)在365中打不开(<br>所以 我只能把WPS Office下了回来*<br><br>出去打印卷 路上雪根本没化好* <br><del>恐怕 下周 还要上网课了...</del><br>但是我今天到现在(14:52) 作业一样没写完... 今晚又要<del>疯狂地</del>写作业了*</p><hr id="hr3" style="display: none;">
+        <input type="button" id="bt3" style="display: none;" onclick="pwct()" value="隐藏内容 点击查看" />
+        <p id="hd" style="display: none;"></p>
+        <input type="button" id="hdbt1" style="display: none;" value="机密" onclick="document.getElementById('qqacc').innerHTML='2089196464';document.getElementById('qqacc').style.color='#333';document.getElementById('qqacc').style.backgroundColor='#000';" /><p id="qqacc" style="display: none;"></p>
+        
         <center>
         <h1 id="thdo"></h1>
         <input type="password" id="pwd" placeholder="请输入密码查看内容"/>
