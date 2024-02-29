@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>计数器</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="">
+        <style>
+            input.btns
+                {
+                    border: 3px solid #fff;
+                    border-radius: 15px;
+                    width: 116.666667px;
+                    height: 45px;
+                    font-size: 1.25em;
+                    background-color: #ccc;
+                }
+            input.sml
+                {
+                    border: 2px solid #fff; border-radius: 5px; background-color: #ccc height: 1.1em;
+                }
+            input:hover
+                {
+                    background: #fff;
+                    transition-duration: 0.2s;
+                }
+            input:active
+                {
+                    background: #888;
+                    transition-duration: 0.2s;
+                }
+        </style>
+        
+        <script src=""></script>
+        <script>
+            var i = 0;
+            function add()
+                {
+                    i++;
+                    document.getElementById("countvalue").value=i;
+                }
+            function sub()
+                {
+                    i--;
+                    document.getElementById("countvalue").value=i;
+                }
+            function reset()
+                {
+                    i = 0;
+                    document.getElementById("countvalue").value=i;
+                }
+            function readvalue()
+                {
+                    i = document.getElementById("lastvalue").value;
+                    if (i == "")
+                        {
+                            document.getElementById("countvalue").value=0;
+                        }
+                    else
+                        {
+                            document.getElementById("countvalue").value=i;
+                        }
+                    document.getElementById("lastvalue").value=null;
+                }
+        </script>
+    </head>
+    
+    <body style="background-color: #999;">
+        <div style="border: 2px; background-color: #ccc; border-radius: 15px; padding: 10px;">
+            <table align="center">
+                <tr><td colspan="3">
+                    <input type="text" id="countvalue" style="width: 350px; height: 50px; border: 3px solid #fff; border-radius: 15px; font-size: 2em; background-color: #eee" value="0" disabled /></td></tr>
+                    <tr><td><input type="button" id="count" value="正计数" onclick="add()" class="btns" /></td><td><input type="button" id="count" value="倒计数" onclick="sub()" class="btns" /></td><td><input type="button" id="reset" value="重置" onclick="reset()" class="btns" /></td></tr><tr><td colspan="3"><a style="height: 30px;"></a></td></tr>
+                    <tr><td colspan="3"><input type="text" id="lastvalue" placeholder="恢复上次的计数值或设置倒计数..." style="height: 1.3em; border: 2px solid #fff; border-radius: 5px; background-color: #e8e8e8;" /><a>    </a><input type="button" id="read" value="恢复之前的计数值" class="sml" onclick="readvalue()" /></td></tr>
+            </table>
+        </div>
+    </body>
+
+</html>
