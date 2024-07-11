@@ -33,15 +33,16 @@
         
         <script src=""></script>
         <script>
+            var ct = 1;
             var i = 0;
             function add()
                 {
-                    i++;
+                    i = i+ct;
                     document.getElementById("countvalue").value=i;
                 }
             function sub()
                 {
-                    i--;
+                    i = i-ct;
                     document.getElementById("countvalue").value=i;
                 }
             function reset()
@@ -62,6 +63,10 @@
                         }
                     document.getElementById("lastvalue").value=null;
                 }
+            function ebi()
+                {
+                    ct =+ document.getElementById("cts").value;
+                }
         </script>
     </head>
     
@@ -72,6 +77,7 @@
                     <input type="text" id="countvalue" style="width: 350px; height: 50px; border: 3px solid #fff; border-radius: 15px; font-size: 2em; background-color: #eee" value="0" disabled /></td></tr>
                     <tr><td><input type="button" id="count" value="正计数" onclick="add()" class="btns" /></td><td><input type="button" id="count" value="倒计数" onclick="sub()" class="btns" /></td><td><input type="button" id="reset" value="重置" onclick="reset()" class="btns" /></td></tr><tr><td colspan="3"><a style="height: 30px;"></a></td></tr>
                     <tr><td colspan="3"><input type="text" id="lastvalue" placeholder="恢复上次的计数值或设置倒计数..." style="height: 1.3em; border: 2px solid #fff; border-radius: 5px; background-color: #e8e8e8;" /><a>    </a><input type="button" id="read" value="恢复之前的计数值" class="sml" onclick="readvalue()" /></td></tr>
+                    <tr><td colspan="3"><input type="text" id="cts" value="1" placeholder="输入计数值..." style="height: 1.3em; border: 2px solid #fff; border-radius: 5px; background-color: #e8e8e8;" /><a>  </a><input type="button" id="ebi" value="设定计数值" onclick="ebi()" class="sml" /></td></tr>
             </table>
         </div>
     </body>
