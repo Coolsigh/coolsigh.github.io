@@ -1,4 +1,4 @@
-div.tt
+            div.tt
             {
                 background-color: rgba(255, 255, 255, 0.2);
                 backdrop-filter: blur(4px) saturate(180%);
@@ -14,12 +14,12 @@ div.tt
                 z-index: 100;
             }
         body
-                {
-                    background-image: linear-gradient(to top left, #4cf , #cff);
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-size: cover;
-                }
+            {
+                background-image: linear-gradient(to top left, #4cf , #cff);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
         div.contantbox
             {
                 background-color: rgba(255, 255, 255, 0.2);
@@ -81,7 +81,7 @@ div.tt
                     height: 1px;
                     border-radius: 2px;
                 }
-            a
+                        a
                 {
                     text-decoration: none;
                 }
@@ -92,4 +92,62 @@ div.tt
             li a:visited
                 {
                     color: #fff;
+                }
+            input.button
+                {
+                    border: 0px;
+                    /*background-image: linear-gradient(to top left, #6ef , #dfd);*/
+                    background-color: rgba(255, 255, 255, 0.6);
+                    border-radius: 6px;
+                    box-shadow: 0 0 10px #888;
+                    opacity: 0.8;
+                }
+            input.button:hover
+                {
+                    box-shadow: 0 0 15px #555;
+                    transition-duration: 0.35s;
+                }
+            input.button:active
+                {
+                    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+                    transition-duration: 0.35s;
+                }
+            input.text
+                {
+                    background-color: rgba(255, 255, 255, 0.4);
+                    border: 0px;
+                    border-radius: 6px;
+                    box-shadow: 0 0 10px #888;
+                    opacity: 0.8;
+                    caret-color: #5af
+                }
+            input.text:hover
+                {
+                    box-shadow: 0 0 15px #555;
+                    transition-duration: 0.35s;
+                }
+            input.text:active
+                {
+                    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+                    transition-duration: 0.35s;
+                }
+            input.password
+                {
+                    background-color: rgba(255, 255, 255, 0.4);
+                    border: 0px;
+                    border-radius: 6px;
+                    box-shadow: 0 0 10px #888;
+                    opacity: 0.8;
+                    caret-color: #5af
+                }
+            input.password:hover
+                {
+                    box-shadow: 0 0 15px #555;
+                    text-decoration: none;
+                    transition-duration: 0.35s;
+                }
+            input.password:active
+                {
+                    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+                    transition-duration: 0.35s;
                 }
