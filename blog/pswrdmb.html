@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clsh's Blog - 密码模版</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://coolsigh.github.io/blog/mubanblog.css">
+        <style>
+
+        </style>
+        
+        <script src=""></script>
+        <script>
+            var times = 0;
+            var locktimes = 0;
+            var val;// = document.getElementById("pw");
+            var val1;// = document.getElementById("pw1");
+            var dsval;// = document.getElementById("pwds");
+            var dsval1;// = document.getElementById('pwds1');
+            function pswrdin(nums)
+                {
+                    val = document.getElementById("pw");
+                    val1 = document.getElementById("pw1");
+                    dsval = document.getElementById("pwds");
+                    dsval1 = document.getElementById('pwds1');
+                    val.value = val.value + nums;
+                    val1.value = val.value;
+                    dsval.value = val.value;
+                    dsval1.value = val.value;
+                }
+            function bksp()
+                {
+                    var t=document.getElementById("pw");
+                    val.value=val.value.substr(0,val.value.length-1);
+                    val1.value = val.value;
+                    dsval.value = val.value;
+                    dsval1.value = val.value;
+                }
+            function verify()
+                {
+                    if (val.value == '1')
+                        {
+                            alert ('密码正确。');
+                            document.getElementById('keyboard1').style.display='none';
+                            document.getElementById('keyboard2').style.display='none';
+                            document.getElementById('checkbox').style.display='none';
+                            document.getElementById('displaypw').style.display='none';
+                            document.getElementById('hidden').style.display='block';
+                        }
+                    else if (val.value == '' || null)
+                        {
+                            alert ('请输入密码！');
+                        }
+                    else
+                        {
+                            pwerr();
+                        }
+                }
+            function pwerr()
+                {
+                    times++;
+                    
+                    if (times >= 5)
+                        {
+                            lock();
+                        }
+                    else
+                        {
+                            alert ("密码错误。\n还有" + (5 - times) + "次机会。");
+                        }
+                }
+            function lock()
+                {
+                    locktimes++;
+                    if (locktimes == 1)
+                        {
+                            alert ("请在30秒后重试。");
+                            document.getElementById('verify').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 30000);
+                        }
+                    else if (locktimes == 2)
+                        {
+                            alert ("请在1分钟后重试。");
+                            document.getElementById('verify').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 60000);
+                        }
+                    else if (locktimes == 3)
+                        {
+                            alert ("请在5分钟后重试。");
+                            document.getElementById('verify').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 300000);
+                        }
+                    else if (locktimes == 4)
+                        {
+                            alert ("请在30分钟后重试。");
+                            document.getElementById('verify').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 1800000);
+                        }
+                    else if (locktimes == 5)
+                        {
+                            alert ("请在100年后重试。");
+                            document.getElementById('verify').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 3110400000000);
+                        }
+                    else if (locktimes >= 6)
+                        {
+                            alert ("请在下辈子重试。");
+                            document.getElementById('verify').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 9.99999999e+99);
+                        }else{}
+                }
+            function openPC()
+                {
+                    if (document.getElementById('PC').checked == true)
+                        {
+                            document.getElementById('keyboard1').style.display='none';
+                            document.getElementById('keyboard2').style.display='block';
+                        }
+                    else if (document.getElementById('PC').checked == false)
+                        {
+                            document.getElementById('keyboard1').style.display='block';
+                            document.getElementById('keyboard2').style.display='none';
+                        }else{}
+                }
+            function displayPassword()
+                {
+                    if (document.getElementById('dspl').checked == true)
+                        {
+                            document.getElementById('pw').style.display='none';
+                            document.getElementById('pwds').style.display='block';
+                            document.getElementById('pw1').style.display='none';
+                            document.getElementById('pwds1').style.display='block';
+                        }
+                    else if (document.getElementById('dspl').checked == false)
+                        {
+                            document.getElementById('pw').style.display='block';
+                            document.getElementById('pwds').style.display='none';
+                            document.getElementById('pw1').style.display='block';
+                            document.getElementById('pwds1').style.display='none';
+                        }else{}
+                }
+        </script>
+    </head>
+    
+    <body style="">
+        <div id="tt" class="tt">
+            <div style="padding-left: 5px; padding-top: 10px; padding-bottom: 0px;"><strong><a style="font-size: 2em; text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">Clsh's Blog</a></strong></div><br>
+            <ul class="ttl">
+                <li style="float: left;"><a href="https://coolsigh.github.io/blog/index.html">主页</a></li>
+                <li style="float: left;"><a href="https://coolsigh.github.io/index.html">主站</a></li>
+                <li style="float: right"><a href="https://coolsigh.github.io/wiki/contactus.html">联系我们</a></li>
+                <li style="float: right"><a href="https://coolsigh.github.io/wiki/about.html">关于</a></li>
+            </ul>
+        </div>
+        <div id="contant" class="contantbox">
+            <div class="contant">
+            <label id="checkbox"><input type="checkbox" id="PC" onclick="openPC()" /><a>使用小键盘</a></label>
+            <label id="displaypw" style="float: right;"><input type="checkbox" id="dspl" onclick="displayPassword()" /><a>显示密码</a></label>
+            <div id="keyboard1">
+                <table border="0" align="center">
+                    <tr>
+                        <td colspan="3">
+                            <input type="password" class="password" id="pw" placeholder="请输入密码" style="height: 40px; width: 244px; font-size: 20px;" readonly/>
+                            <input type="text" class="password" id="pwds" placeholder="请输入密码" style="height: 40px; width: 244px; font-size: 20px; display: none;" readonly/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="button" id="1" value="1" onclick="pswrdin(1)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                        <td><input type="button" class="button" id="2" value="2" onclick="pswrdin(2)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                        <td><input type="button" class="button" id="3" value="3" onclick="pswrdin(3)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="button" id="4" value="4" onclick="pswrdin(4)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                        <td><input type="button" class="button" id="5" value="5" onclick="pswrdin(5)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                        <td><input type="button" class="button" id="6" value="6" onclick="pswrdin(6)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="button" id="7" value="7" onclick="pswrdin(7)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                        <td><input type="button" class="button" id="8" value="8" onclick="pswrdin(8)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                        <td><input type="button" class="button" id="9" value="9" onclick="pswrdin(9)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="button" id="bksp" value="←" onclick="bksp()" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                        <td><input type="button" class="button" id="0" value="0" onclick="pswrdin(0)" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                        <td><input type="button" class="button" id="verify" value="确认" onclick="verify()" style="height: 45px; width: 80px; font-size: 20px;" /></td>
+                    </tr>
+                </table>
+                
+                </div>
+                <div id="keyboard2" style="display: none;">
+                <table border="0" align="center">
+                    <tr>
+                        <td colspan="3">
+                            <input type="password" class="password" id="pw1" placeholder="请输入密码" style="height: 20px; width: 154px;" readonly/>
+                            <input type="text" class="password" id="pwds1" placeholder="请输入密码" style="height: 20px; width: 154px; display: none;" readonly/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="button" id="1" value="1" onclick="pswrdin(1)" style="height: 25px; width: 50px;" /></td>
+                        <td><input type="button" class="button" id="2" value="2" onclick="pswrdin(2)" style="height: 25px; width: 50px;" /></td>
+                        <td><input type="button" class="button" id="3" value="3" onclick="pswrdin(3)" style="height: 25px; width: 50px;" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="button" id="4" value="4" onclick="pswrdin(4)" style="height: 25px; width: 50px;" /></td>
+                        <td><input type="button" class="button" id="5" value="5" onclick="pswrdin(5)" style="height: 25px; width: 50px;" /></td>
+                        <td><input type="button" class="button" id="6" value="6" onclick="pswrdin(6)" style="height: 25px; width: 50px;" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="button" id="7" value="7" onclick="pswrdin(7)" style="height: 25px; width: 50px;" /></td>
+                        <td><input type="button" class="button" id="8" value="8" onclick="pswrdin(8)" style="height: 25px; width: 50px;" /></td>
+                        <td><input type="button" class="button" id="9" value="9" onclick="pswrdin(9)" style="height: 25px; width: 50px;" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="button" id="bksp" value="←" onclick="bksp()" style="height: 25px; width: 50px;" /></td>
+                        <td><input type="button" class="button" id="0" value="0" onclick="pswrdin(0)" style="height: 25px; width: 50px;" /></td>
+                        <td><input type="button" class="button" id="verify" value="确认" onclick="verify()" style="height: 25px; width: 50px;" /></td>
+                    </tr>
+                </table>
+                
+                </div>
+                <div id="hidden" style="display: none;">
+                    <p>啊！你发现我了</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
