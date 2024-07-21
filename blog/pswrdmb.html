@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Clsh's Blog - 密码模版</title>
+        <title>Clsh's Blog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="https://coolsigh.github.io/blog/mubanblog.css">
         <style>
@@ -76,37 +76,43 @@
                         {
                             alert ("请在30秒后重试。");
                             document.getElementById('verify').disabled = true;
-                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 30000);
+                            document.getElementById('verify1').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; document.getElementById("verify1").disabled = false; alert ("请重试。");', 30000);
                         }
                     else if (locktimes == 2)
                         {
                             alert ("请在1分钟后重试。");
                             document.getElementById('verify').disabled = true;
-                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 60000);
+                            document.getElementById('verify1').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; document.getElementById("verify1").disabled = false; alert ("请重试。");', 60000);
                         }
                     else if (locktimes == 3)
                         {
                             alert ("请在5分钟后重试。");
                             document.getElementById('verify').disabled = true;
-                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 300000);
+                            document.getElementById('verify1').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; document.getElementById("verify1").disabled = false; alert ("请重试。");', 300000);
                         }
                     else if (locktimes == 4)
                         {
                             alert ("请在30分钟后重试。");
                             document.getElementById('verify').disabled = true;
-                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 1800000);
+                            document.getElementById('verify1').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; document.getElementById("verify1").disabled = false; alert ("请重试。");', 1800000);
                         }
                     else if (locktimes == 5)
                         {
                             alert ("请在100年后重试。");
                             document.getElementById('verify').disabled = true;
-                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 3110400000000);
+                            document.getElementById('verify1').disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; document.getElementById("verify1").disabled = false; alert ("请重试。");', 3110400000000);
                         }
                     else if (locktimes >= 6)
                         {
                             alert ("请在下辈子重试。");
                             document.getElementById('verify').disabled = true;
-                            setTimeout ('document.getElementById("verify").disabled = false; alert ("请重试。");', 9.99999999e+99);
+                            document.getElementById("verify1").disabled = true;
+                            setTimeout ('document.getElementById("verify").disabled = false; document.getElementById("verify1").disabled = false; alert ("请重试。");', 99999999999999999999999999999999999);
                         }else{}
                 }
             function openPC()
@@ -213,7 +219,7 @@
                     <tr>
                         <td><input type="button" class="button" id="bksp" value="←" onclick="bksp()" style="height: 25px; width: 50px;" /></td>
                         <td><input type="button" class="button" id="0" value="0" onclick="pswrdin(0)" style="height: 25px; width: 50px;" /></td>
-                        <td><input type="button" class="button" id="verify" value="确认" onclick="verify()" style="height: 25px; width: 50px;" /></td>
+                        <td><input type="button" class="button" id="verify1" value="确认" onclick="verify()" style="height: 25px; width: 50px;" /></td>
                     </tr>
                 </table>
                 
