@@ -1,1 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clsh's Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://coolsigh.github.io/blog/mubanblog.css">
+        <style>
+            div.ending
+                {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(180, 0, 0, 0.5);
+                    z-index: 50;
+                    display: flex;
+                    border-radius: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    visibility: hidden;
+                }
+            input.ending
+                {
+                    border: 0.1px solid #fff;
+                    color: #fff;
+                    background-color: #666;
+                    height: 2.5em;
+                    width: 200px;
+                }
+            input.ending:hover
+                {
+                    border: 0.1px solid #ff9;
+                    color: #ff9;
+                    background-color: #999;
+                }
+            .w
+                {
+                    color: #fff;
+                }
+            div.pgs
+                {
+                    display: none;
+                }
+        </style>
+        
+        <script src=""></script>
+        <script>
+            ret();
+            var st = 0;
+            var rate = Math.round(Math.random() * 10);
+            function ret()
+                {
+                var testcode = prompt ("该文件正在测试。\n请向相关人员请求测试密钥并在下方输入以进行测试。\n当然要是你足够NB你可以直接凭一己之力获得密钥（划掉")
+                    if (testcode == 'M1C8L-HXTAY-I8U1U')
+                        {}else if (testcode == '')
+                            {
+                                window.location.href='https://coolsigh.github.io/blog/index.html';
+                            }else{
+                            ret();
+                        }
+                }
+// functions-----------------------------------------------------------------------------------------------------------------------
+            function start()
+                {
+                    document.getElementById("start").style.display='none';
+                    document.getElementById("d1").style.display='block';
+                }
+            function gowiththem()
+                {
+                    document.getElementById("d1").style.display='none';
+                    document.getElementById("d2").style.display='block';
+                }
+            function walkalone()
+                {
+                    document.getElementById("d1").style.display='none';
+                    document.getElementById("d3").style.display='block';
+                }
+            function buypen()
+                {
+                    document.getElementById("d2").style.display='none';
+                    document.getElementById("d4").style.display='block';
+                }
+            function cooldown()
+                {
+                    document.getElementById("d2").style.display='none';
+                    document.getElementById("d5").style.display='block';
+                }
+            function waitforawhile()
+                {
+                    document.getElementById("d4").style.display='none';
+                    document.getElementById("d5").style.display='none';
+                    document.getElementById("d6").style.display='block';
+                }
+            function successcross()
+                {
+                    document.getElementById("d4").style.display='none';
+                    document.getElementById("d5").style.display='none';
+                    document.getElementById("d6").style.display='block';
+                }
+            function dohmwrk()
+                {
+                    document.getElementById("d3").style.display='none';
+                    document.getElementById("d6").style.display='none';
+                    document.getElementById("d7").style.display='block';
+                }
+            function usephone()
+                {
+                    document.getElementById("d3").style.display='none';
+                    document.getElementById("d6").style.display='none';
+                    document.getElementById("d7").style.display='none';
+                    document.getElementById("d8").style.display='block';
+                }
+            function checkchecked()
+                {
+                    if (document.getElementById("hm1").checked == true || document.getElementById("hm2").checked == true || document.getElementById("hm3").checked == true || document.getElementById("hm4").checked == true || document.getElementById("hm5").checked == true || document.getElementById("hm6").checked == true || document.getElementById("hm7").checked == true || document.getElementById("hm8").checked == true || document.getElementById("hm9").checked == true || document.getElementById("hm10").checked == true)
+                        {
+                            document.getElementById("inside1").style.display='block';
+                            document.getElementById("hm1").disabled=true;
+                            document.getElementById("hm2").disabled=true;
+                            document.getElementById("hm3").disabled=true;
+                            document.getElementById("hm4").disabled=true;
+                            document.getElementById("hm5").disabled=true;
+                            document.getElementById("hm6").disabled=true;
+                            document.getElementById("hm7").disabled=true;
+                            document.getElementById("hm8").disabled=true;
+                            document.getElementById("hm9").disabled=true;
+                            document.getElementById("hm10").disabled=true;
+                            document.getElementById("ctn1").disabled=true;
+                            document.getElementById("ctn1").value="请向上滑动";
+                        }
+                    else
+                        {
+                            document.getElementById("inside2").style.display='block';
+                            document.getElementById("hm1").disabled=true;
+                            document.getElementById("hm2").disabled=true;
+                            document.getElementById("hm3").disabled=true;
+                            document.getElementById("hm4").disabled=true;
+                            document.getElementById("hm5").disabled=true;
+                            document.getElementById("hm6").disabled=true;
+                            document.getElementById("hm7").disabled=true;
+                            document.getElementById("hm8").disabled=true;
+                            document.getElementById("hm9").disabled=true;
+                            document.getElementById("hm10").disabled=true;
+                            document.getElementById("ctn1").disabled=true;
+                            document.getElementById("ctn1").value="请向上滑动";
+                        }
+                }
+                function sp1()
+                                {
+                                    setTimeout ("document.getElementById('sp1').style.display='block';document.getElementById('awa').style.display='block';", 10000);
+                                }
+                function start_run(n)
+                                {
+                                    var progress1 = document.getElementById("progress1");
+                                    n = n - 1;
+                                    cur_task = 100 - n;
+                                    progress1.value = cur_task;
+                                    setTimeout("start_run(" + n + ")", 100);
+                                    document.getElementById("writenow").disabled=true;
+                                    if(n == 0)
+                                        {
+                                            document.getElementById("writenow").value="写完了，请向上滑动";
+                                        }
+                                }
+                
+// endings-------------------------------------------------------------------------------------------------------------------------
+            function ending1()
+                {
+                    st++;
+                    if (st == 25)
+                    {
+                        document.getElementById('ending1').style.visibility='visible';
+                    }else{}
+                }
+            function ending2()
+                {
+                    if (rate <= 5)
+                        {
+                            document.getElementById("ending2").style.visibility='visible';
+                        }
+                    else
+                        {
+                            successcross();
+                        }
+                }
+        </script>
+    </head>
+    
+    <body style="">
+        <div id="tt" class="tt">
+            <div style="padding-left: 5px; padding-top: 10px; padding-bottom: 0px;"><strong><a style="font-size: 2em; text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">Clsh's Blog</a></strong></div><br>
+            <ul class="ttl">
+                <li style="float: left;"><a href="https://coolsigh.github.io/blog/index.html">主页</a></li>
+                <li style="float: left;"><a href="https://coolsigh.github.io/index.html">主站</a></li>
+                <li style="float: right"><a href="https://coolsigh.github.io/wiki/contactus.html">联系我们</a></li>
+                <li style="float: right"><a href="https://coolsigh.github.io/wiki/about.html">关于</a></li>
+            </ul>
+        </div>
+        <div id="contant" class="contantbox">
+        
+            <div class="contant">
+            
+                <div id="start">
+                    <h2>"你"的世界</h2>
+                    <input type="button" class="button" style="height: 2em; width: 125px;" value="开始游戏" onclick="start()" /><br><br>
+                    <input type="button" class="button" style="height: 2em; width: 125px;" value="退出游戏" onclick="ending1();" />
+                    
+                    <br><br><br><br><br>
+                </div>
+                
+<!-- progress------------------------------------------------------------------------------------- -->
+                
+                <div id="d1" class="pgs">
+                    <p>你是一个普通的学生。</p>
+                    <p>又到了放学的时间。你看着远处垂垂欲落的夕阳，同学们正成群结队、有声有笑地走出校门..."明天就是周末了..."你想。</p>
+                    <p>现在，你要____________</p>
+                    <input type="button" class="button" style="height: 2em; width: 125px;" value="和他们同行" onclick="gowiththem()" />
+                    <input type="button" class="button" style="height: 2em; width: 125px;" value="自己独行" onclick="walkalone()" />
+                </div>
+<!-- OK --> 
+                <div id="d2" class="pgs">
+                    <p>你急急地收拾完书桌上乱七八糟的书本，背上包，向着还未离开的一小群同学冲去。急忙之中，你失手把水笔摔在了地上。你捡起来，粗略的看了一眼——大概是摔坏了。</p>
+                    <p>“...f**k，什么呀，今天作业真t*多。”“唉，多得我都不想写了。”“...”</p>
+                    <p>“这些作业他们自己怎么不写啊，还让我们写，可真够缺德的。”你附和道。话音刚落，大家就一致表示同意。</p>
+                    <p>正值炎炎夏日，即使太阳落了山也依旧炎热难耐。不久，一行人走到了超市。你有了一个想法...</p>
+                    <p>“__________，要不要__________呢?”</p>
+                    <input type="button" class="button" style="height: 2em;" value="水笔坏了；去买一支新水笔" onclick="buypen()" />
+                    <input type="button" class="button" style="height: 2em;" value="天这么热；买根冰棍吃" onclick="cooldown()" />
+                </div>
+                
+                <div id="d3" class="pgs">
+                    <p>你不紧不慢地收拾完东西，背着包走出了教室。到了操场，你发现只有几个同学了。你加快脚步，走出了校门。</p>
+                    <p>太阳已经落山了。正值炎夏，即使傍晚也炎热难耐。不久你看到了一个超市，你走了进去。</p>
+                    <p>一进超市，你就看到了一个装满各类冰棍的冰箱。你用力拉开冰箱门，拿出一根最普通的冰棍——这是你最喜欢吃的。</p>
+                    <p>付完了钱，你走出超市。看着感觉比进超市前更暗的天，你加快了回家的脚步。</p>
+                    <p>到了家，你吃完饭，回到了自己的小房间。房间的主体为黑白色调，一眼看去能顿感清醒。你家的居住环境很好，一般除了鸟鸣和风声就再没有别的声音了。</p>
+                    <p>现在，你想__________。</p>
+                    <input type="button" class="button" style="height: 2em;" value="先写作业" onclick="dohmwrk()" />
+                    <input type="button" class="button" style="height: 2em;" value="玩会手机" onclick="usephone()" />
+                </div>
+                
+                <div id="d4" class="pgs">
+                    <p>你走进了超市，随手拿了几支水笔，并付了钱。与此同时，你看到同行的伙伴们买了些冰棍来解暑。但超市里开着空调，已经很凉快了，所以你并不想去买冰棍。</p>
+                    <p>你看着垂垂欲落的夕阳，便对同学们说：“天快要黑了，我们还是赶紧走吧。”大家纷纷表示同意，离开了超市。</p>
+                    <p>才走了不远，就遇到了一个十字路口。不巧，现在是红灯。你有点着急，但是还有足够的时间，你就想着还是__________吧。</p>
+                    <input type="button" class="button" style="height: 2em;" value="老老实实等会" onclick="waitforawhile()" />
+                    <input type="button" class="button" style="height: 2em;" value="趁没车赶紧穿过马路" onclick="ending2()" />
+                </div>
+                
+                <div id="d5" class="pgs">
+                    <p>你走进超市，用力拉开冰箱，拿了一根最普通的冰棍——你从小到大一直都喜欢吃它。一旁的同学们正叽叽喳喳地讨论着超市最新进货的冰棍，可是你不为所动。“不论如何，还是自己最喜欢的东西最好。”你这样想着。</p>
+                    <p>你和同学们陆陆续续走出了超市。你看看天，太阳已经落山了，便对着同学们说：“我们还是快点走吧，天快黑了。”大家都点头同意。</p>
+                    <p>不一会，你们就走到了十字路口处。但是现在是红灯，你们都不能穿路。你有点着急，但时间足够，于是你想着就__________吧。</p>
+                    <input type="button" class="button" style="height: 2em;" value="老老实实等会" onclick="waitforawhile()" />
+                    <input type="button" class="button" style="height: 2em;" value="趁没车赶紧穿过马路" onclick="ending2()" />
+                </div>
+                
+                <div id="d6" class="pgs">
+                    <p>你好不容易穿过了马路，而其他同学却没有和你同行——因为同学们都右转了。你独自一人跑着、跳着，无聊地踢着路上的小石子。</p>
+                    <p>“今天回家的路好像格外长啊。”</p>
+                    <p>天色渐渐暗了下来，你也终于到了家。你吃完饭，回到了自己的小房间。房间的主体为黑白色调，一眼看去能让人瞬间清醒。你家由于住在远离城市喧嚣处，所以一般只能听见鸟鸣和风声。</p>
+                    <p>“明天就是周末了，”你想着，“要不我还是__________吧。”</p>
+                    <input type="button" class="button" style="height: 2em;" value="先写作业" onclick="dohmwrk()" />
+                    <input type="button" class="button" style="height: 2em;" value="玩会手机" onclick="usephone()" />
+                </div>
+                
+                <div id="d7" class="pgs">
+                    <p>你轻轻笑了笑，拉开书包，拿出了作业本。作业本上记下了这些：</p>
+                    <div style="border: 1px solid #000; border-radius: 8px; padding: 8px; background-color: #ffb;">
+                        <h4>语文</h4>
+                        <label><input type="checkbox" id="hm1"><a>第17课字词自考2遍</a></label><br>
+                        <label><input type="checkbox" id="hm2"><a>第17课课后第3题自查资料</a></label><br>
+                        <label><input type="checkbox" id="hm3" checked><a>预习18课</a></label>
+                        <h4>数学</h4>
+                        <label><input type="checkbox" id="hm4"><a>xx练习册P106-112（P108 3.6.7. , P111 12.14.不做）</a></label>
+                        <h4>英语</h4>
+                        <label><input type="checkbox" id="hm5"><a>xx课课练P89-92</a></label><br>
+                        <label><input type="checkbox" id="hm6"><a>Module7 单词自考练会为止</a></label>
+                        <h4>物理</h4>
+                        <label><input type="checkbox" id="hm7"><a>蓝练习册P131-135，23题不做</a></label><br>
+                        <label><input type="checkbox" id="hm8"><a>书P99课后题</a></label>
+                        <h4>化学</h4>
+                        <label><input type="checkbox" id="hm9"><a>自找题做</a></label><br>
+                        <label><input type="checkbox" id="hm10" checked><a>复习知识点</a></label>
+                        <h4>政史</h4>
+                        <label><input type="checkbox" id="hm11" checked disabled><a>无</a></label>
+                    </div>
+                    <p>（在作业本上勾选你想写的作业后点击“继续”）</p>
+                    <input type="button" id="ctn1" class="button" style="height: 2em; width: 150px;" value="继续" onclick="checkchecked(); start-run(100);" /><br><br>
+                    <div id="inside1" class="pgs">
+                        <p>你决定先做这些作业。<br>作业进度:</p><br>
+                        <progress id='progress1' value="0" max="100"></progress><br><br>
+                        <input type="button" class="button" id="writenow" onclick="start_run(100);sp1();" value="现在写" style="height: 2em; width: 200px;" /><br>
+                        <p id="sp1" style="display: none;">你终于写完了作业——是时候放松一下了。</p><br>
+                        <input type="button" id="awa" class="button" style="height: 2em; display: none;" value="继续" onclick="usephone();" />
+                    </div>
+                    <div id="inside2" class="pgs">
+                        <p>你抬起笔，想了想，又把笔放下：“算了，还是不写算了，玩会手机吧。”</p>
+                        <input type="button" class="button" style="height: 2em;" value="继续" onclick="usephone();" />
+                    </div>
+                </div>
+                
+                <div id="d8" class="pgs">
+                    <p>你打开了手机，...</p>
+                </div>
+                
+<!-- endings-------------------------------------------------------------------------------------- -->
+            
+                <div class="ending" id="ending1">
+                    <div>
+                        <a class="w" style="font-size: 2em;">结局1 - 还是老老实实做回自己</a><br>
+                        <a class="w">你很执着。(Normal ending)</a><br><br>
+                        <input type="button" class="ending" value="重新开始" onclick="setTimeout('location.reload();', 80)" />
+                    </div>
+                </div>
+                
+                <div class="ending" id="ending2">
+                    <div>
+                        <a class="w" style="font-size: 2em;">结局2 - 白发人送黑发人</a><br>
+                        <a class="w">你在穿过马路的时候由于有闯红灯的车高速驶过，路上只留下了一滩血迹。<br><br><strong>永远不要</strong>存在<strong>任何形式的</strong>侥幸心理。(Terrible ending)</a><br><br>
+                        <input type="button" class="ending" value="重新开始" onclick="setTimeout('location.reload();', 80)" />
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            
+        </div>
+    </body>
+
+</html>
 
