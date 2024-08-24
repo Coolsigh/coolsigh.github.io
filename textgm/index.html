@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Clsh's Blog</title>
+        <title>Clsh's Blog - “你”的世界</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="https://coolsigh.github.io/blog/mubanblog.css">
         <style>
@@ -49,7 +49,10 @@
         <script>
             //ret();
             var st = 0;
-            var rate = Math.round(Math.random() * 10);
+            var rate;
+            var selfharm = false;
+            setInterval ("rate = Math.round(Math.random() * 10); /*alert (rate);*/", 2000);
+           
             alert ("如果您现在正在用微信浏览此页面，我们建议您使用除微信外的其他浏览器浏览此页面以获得最佳体验。\n\n如果您使用的是苹果设备，可忽略此消息。");
             function ret()
                 {
@@ -63,6 +66,22 @@
                         }
                 }
 // functions-----------------------------------------------------------------------------------------------------------------------
+            function namedefine()
+                {
+                    var name = document.getElementById("urname").value;
+                    if (name == "")
+                        {
+                            alert ("你应该有一个名字才对...");
+                        }else if (name == "clsh" || name == "Clsh" || name == "coolsigh" || name == "Coolsigh" || name == "凉叹" || name == "凉暮叹雪")
+                        {
+                            alert ("或许你应该起一个属于自己的名字...");
+                        }else{
+                            document.getElementById("yourname").innerHTML = document.getElementById("yourname1").innerHTML = document.getElementById("urname").value;
+                            document.getElementById("cfmnm").style.display='none';
+                            document.getElementById("nmnxt").style.display='block';
+                            document.getElementById("urname").disabled=true;
+                        }
+                }
             function start()
                 {
                     document.getElementById("start").style.display='none';
@@ -173,7 +192,7 @@
                                 document.getElementById("ctn2").disabled=true;
                                 document.getElementById("dispgn").innerHTML = document.getElementById("gamename").value;
                                 document.getElementById("gamename").disabled=true;
-                                setTimeout ("document.getElementById('getup').style.display='block'", 10000);
+                                setTimeout ("document.getElementById('getup').style.display='block'", 5000);
                             }else{
                                 alert ("不是，你看不到上面要输入游戏名吗？");
                             }
@@ -199,6 +218,21 @@
                         document.getElementById("d9").style.display='none';
                         document.getElementById("d11").style.display='block';
                     }
+                function allright()
+                    {
+                        document.getElementById("d10").style.display='none';
+                        document.getElementById("d12").style.display='block';
+                    }
+                function donotwant()
+                    {
+                        document.getElementById("d10").style.display='none';
+                        document.getElementById("a1").style.display='block';
+                        document.getElementById("d11").style.display='block';
+                    }
+                function suicide()
+                    {
+                        ending3();
+                    }
 
 // endings-------------------------------------------------------------------------------------------------------------------------
             function ending1()
@@ -219,6 +253,10 @@
                         {
                             successcross();
                         }
+                }
+            function ending3()
+                {
+                    document.getElementById("ending3").style.visibility='visible';
                 }
         </script>
     </head>
@@ -248,11 +286,14 @@
 <!-- progress------------------------------------------------------------------------------------- -->
                 
                 <div id="d1" class="pgs">
-                    <p>你是一个普通的学生。</p>
+                    <a>你叫</a><input type="text" class="text" style="height: 1.2em;" maxlength="10" id="urname" placeholder="请输入你的名字..." /><a>，是一个普通的学生。</a><br>
+                    <input type="button" class="button" style="height: 2em;" value="确定" id="cfmnm" onclick="namedefine()" />
+                    <div id="nmnxt" class="pgs">
                     <p>又到了放学的时间。你看着远处垂垂欲落的夕阳，同学们正成群结队、有声有笑地走出校门...“明天就是周末了...”你想。</p>
                     <p>现在，你要____________</p>
                     <input type="button" class="button" style="height: 2em; width: 125px;" value="和他们同行" onclick="gowiththem()" />
                     <input type="button" class="button" style="height: 2em; width: 125px;" value="自己独行" onclick="walkalone()" />
+                    </div>
                 </div>
                  
                 <div id="d2" class="pgs">
@@ -344,7 +385,7 @@
                     <div id="hd1" class="pgs">
                         <p>于是你就打开了<a id="dispgn"></a>，玩了一会。</p>
                         <p>手机十分钟，人间一小时。很快到了睡觉的时间。你望望窗外，远处仍灯火辉煌——那是多少人用生命燃起的灯火啊。你拉上窗帘，关上灯，躺在床上，开始了一天中最后的遐想...</p>
-                        <p>（10秒后可以起床）</p>
+                        <p>（5秒后可以起床）</p>
                         <input type="button" class="button" id="getup" style="height: 2em; display: none;" value="天亮了，起床" onclick="getup()" />
                     </div>
                 </div>
@@ -369,11 +410,36 @@
                 </div>
                 
                 <div id="d10" class="pgs">
-                    待续
+                    <p>你点点头，同意了。你爹见了喜笑颜开，说：“好！期末辅导课今天下午就开始。你去把东西准备准备吧。”</p>
+                    <p>你轻轻叹口气，却只能照做了。时间总是这样快，下午你不得不出门，前往期末辅导班了。</p>
+                    <p>经过复杂的步骤后，你坐在班里。可是周围没有一个熟悉的人。看着旁边的人吵吵闹闹，你开始后悔了：“早知道不来就好了...”正想着，一个穿着朴素的人走了进来，拍了拍桌子——班里瞬间安静了下来。那人清清嗓子，开口说道：“各位同学们好。还有一个月就要进行期末考试了，所以接下来的一个月你们要在这里好好进行复习...”</p>
+                    <p>你感到疑惑，学校课程都没讲完，为什么复习啊？</p>
+                    <p>“...对学过的课进行复习，对没学的课进行预习。接下来我们再说说我们要持续的时间——在期末考试之前每天都要来。周末从早上七点半到晚上八点；周一到周五的话，就从放学开始到晚上八点半吧。”</p>
+                    <p>你猛地一惊，更加后悔要来这个破地方了。你硬着头皮坐了一下午，终于到了回家的时间。</p>
+                    <p>你一到家，父亲就问你：“今天学得怎么样？”</p>
+                    <p>你想了想，答道：__________</p>
+                    <input type="button" class="button" style="height: 2em;" value="还不错" onclick="allright()" />
+                    <input type="button" class="button" style="height: 2em;" value="我不想去了" onclick="donotwant()" />
                 </div>
                 
                 <div id="d11" class="pgs">
-                    待续
+                    <p>“什么？”你父亲睁大了眼睛，不可思议地对你说道，“我跟你说，你要是不去，期末考砸了你看我收不收拾你！”说罢便“哐”地一声摔门而去。</p><br>
+                    <a>你感到很委屈：“不是，我就是不想去，你急什么啊！”就这样你越想越气，越想越委屈，就</a><a id="a1" style="display: none;">回到房间</a><a>拉了窗帘，上了床，用被子把自己盖了起来。</a><br>
+                    <p>就这样过了两三个小时，你父亲又进来了。他看到你这个样子，立刻生气起来：</p>
+                    <p>“你在那干什么呢！”</p>
+                    <p>你没有回应。</p>
+                    <p>“<a id="yourname"></a>！”</p>
+                    <p>你还是没有回应。</p>
+                    <p>突然，你父亲气急败坏地来抓你的被子，你试图反抗，但你怎么能比得过你父亲？被子被强行掀开了。你父亲看见你哭，立刻大怒：</p>
+                    <p>“<a id="yourname1"></a>，你哭怎么个意思？我叫你上辅导不对啊！你能不能念？能念念，不能念明天就给我下来干活！”说罢走到窗前“唰”的一声把窗帘拉开，又再次摔门而去。</p>
+                    <p>你更加崩溃，想要__________。</p>
+                    <input type="button" class="button" style="height: 2em;" value="做一些什么放松一下" onclick="relax(); alert ('更累了，要开学了，可能要等3年以后了);" />
+                    <input type="button" class="button" style="height: 2em;" value="自残" onclick="doselfharm(); alert ('要开学了，下一次更新可能是在3年以后...');" />
+                    <input type="button" class="button" style="height: 2em;" value="自杀" onclick="suicide()" />
+                </div>
+                
+                <div id="d12" class="pgs">
+                    
                 </div>
                 
 <!-- endings-------------------------------------------------------------------------------------- -->
@@ -394,11 +460,15 @@
                     </div>
                 </div>
                 
-                
+                <div class="ending" id="ending3">
+                    <div>
+                        <a class="w" style="font-size: 2em;">结局3 - 中式教育必定的悲剧</a><br>
+                        <a class="w">你受不了父亲对你的成绩的病态重视，这使你的压力越来越大。你在反复纠结中选择了最后一次跳跃...<br><br>当天深夜，你爬上天台一跃而下。</a><br><br>
+                        <input type="button" class="ending" value="重新开始" onclick="setTimeout('location.reload();', 80)" />
+                    </div>
+                </div>
                 
             </div>
-            
         </div>
     </body>
-
 </html>
