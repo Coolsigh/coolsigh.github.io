@@ -1,0 +1,21 @@
+li.items
+    {
+        text-decoration: none;
+        list-style-type: none;
+        width: 100%;
+    }
+ul.items
+        {
+            margin: 0;
+            padding: 2px;
+            list-style-type: none;
+            overflow: hidden;
+        }
+li a.items
+        {
+            display: block;
+            padding: 5px 7px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 8px;
+        }
