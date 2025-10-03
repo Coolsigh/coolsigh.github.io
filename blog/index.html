@@ -5,7 +5,28 @@
         <title>Clsh's Blog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="https://coolsigh.github.io/blog/mubanblog.css">
-        <style>        </style>
+        <style>
+            li a.blgitem
+                {
+                    color: #000;
+                    display: block;
+                }
+            li a.blgitem:hover
+                {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                    transition-duration: 0.15s;
+                }
+            li a.blgitem:visited
+                {
+                    color: #004869;
+                }
+            ul.item
+                {
+                    margin: 0;
+                    padding: 2px;
+                }
+        </style>
         
         <script src=""></script>
         <script>
@@ -29,10 +50,14 @@
                 <marquee direction="up" scrollamount="2" height="80" behavior="scroll" style="background-color: rgba(255, 255, 255, 0.6); border-radius: 8px; box-shadow: 0 0 8px #888; padding-left: 7px; padding-right: 7px; border-left: 6px solid #98a;"><h2>全站公告</h2><p>欢迎来到我的博客！</p><p>本站使用了新的样式和格式，限于能力，若发现bug请联系我！谢谢！</p><br></marquee>
                 <hr>
                 <h4>页面</h4>
-                <a href="https://coolsigh.github.io/blog/hist.html">一件事，自行评判 (2025年7月26日 08:40)</a>
+                <ul class="item">
+                    <li style="list-style-type: none; padding-left: 0;"><a class="blgitem" href="https://coolsigh.github.io/blog/hist.html">一件事，自行评判 (2025年7月26日 08:40)</a></li>
+                </ul>
                 <hr>
                 <h4>测试页面</h4>
-                <a href="https://coolsigh.github.io/blog/cl.html">符语使用手册</a>
+                <ul class="item">
+                    <li style="list-style-type: none; padding-left: 0;"><a class="blgitem" href="https://coolsigh.github.io/blog/cl.html">符语使用手册</a></li>
+                </ul>
             </div>
         </div>
     </body>
