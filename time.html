@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Time</title>
+        <style>
+            .tmdisp {
+                color: #fff;
+                font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+            }
+            .dv {
+                display: flex;
+                padding: 50%;
+                width: 400px;
+            }
+        </style>
+        <script>
+            setInterval ("DTFetch()", 1);
+            function DTFetch() {
+                var year = new Date().getFullYear();
+                var month = new Date().getMonth() + 1;
+                var day = new Date().getDate();
+                var week = new Date().getDay();
+                var hr = new Date().getHours()
+                var min = new Date().getMinutes();
+                var sec = new Date().getSeconds();
+                var weekCha;
+                if (week == 0) {
+                    weekCha = "日";
+                }else if (week == 1) {
+                    weekCha = "一";
+                }else if (week == 2) {
+                    weekCha = "二";
+                }else if (week == 3) {
+                    weekCha = "三";
+                }else if (week == 4) {
+                    weekCha = "四";
+                }else if (week == 5) {
+                    weekCha = "五";
+                }else {
+                    weekCha = "六";
+                }
+                if (hr < 10) {
+                    var realHr = "0" + hr;
+                }else {
+                    var realHr = hr;
+                }
+                if (min < 10) {
+                    var realMin = "0" + min;
+                }else {
+                    var realMin = min;
+                }
+                if (sec < 10) {
+                    var realSec = "0" + sec;
+                }else {
+                    var realSec = sec;
+                }
+                    var fullDate = year + "年" + month + "月" + day + "日  星期" + weekCha;
+                    document.getElementById("date").innerHTML=fullDate;
+                    var fullTime = realHr + ":" + realMin + ":" + realSec;
+                    document.getElementById("time").innerHTML=fullTime;
+            }
+        </script>
+    </head>
+    
+    <body style="background-color: #000;">
+        <center><div class="dv">
+            <table>
+            <tr><td><center><p id="date" style="font-size: 2.5em;" class="tmdisp">m</p></center></td></tr>
+            <tr><td><center><h1 id="time" style="font-size: 4.5em;" class="tmdisp">k</h1></center></td></tr>
+            <tr><td><center><p id="event" style="font-size: 2.5em;" class="tmdisp">No events.</p></center></td></tr>
+            </table>
+        </div></center>
+    </body>
+</html>
