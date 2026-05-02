@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Clsh's Blog</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="https://coolsigh.github.io/blog/mubanblog.css">
+		<style>
+		</style>
+		
+		<script src=""></script>
+		<script>
+			
+		</script>
+	</head>
+	
+	<body style="">
+		<div id="tt" class="tt">
+			<div style="padding-left: 5px; padding-top: 10px; padding-bottom: 0px;"><strong><a style="font-size: 2em; text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">Clsh's Blog</a></strong></div><br>
+			<ul class="ttl">
+				<li style="float: left;"><a href="https://coolsigh.github.io/blog/index.html">主页</a></li>
+				<li style="float: left;"><a href="https://coolsigh.github.io/index.html">主站</a></li>
+				<li style="float: right"><a href="https://coolsigh.github.io/wiki/contactus.html">联系我们</a></li>
+				<li style="float: right"><a href="https://coolsigh.github.io/wiki/about.html">关于</a></li>
+			</ul>
+		</div>
+		<div id="contant" class="contantbox">
+			<div class="contant">
+				<h1>符号语言使用手册(第五版修订)</h1>
+		<hr>
+		<h2>序言</h2>
+		<p>又一年花开花落，符语手册又迎来新一次的修订——时光飞逝，果然不假。<br><br>符语自创建以来已有近三年的历史了。如今的第6版符语是这三年间多次改进而成的。<span style="font-size: 0.35em; color: blue;"><a href="javascript:alert('注1：截止作序时为三年，当时使用的是第六版符语。');">注1 </a></span>然而符语的长期使用者仅有两位——符语可能确实很幼稚吧。<br><br>至于符语本身，是Clsh在闲暇之余创立的一套密语体系，以汉语拼音为基础，因此具有较低的学习难度。后来，高级符语体系（Advanced Code-language System, ACS）逐渐形成，灵感来自于双拼输入法。ACS使用的双拼方案是较为主流的小鹤方案。如果精通此方案，那么学习ACS将很容易，否则会有一定的学习难度。学习需要时间，所以请保持耐心。<br><br>一些英文学习者可能会有疑问，为什么符语的英文译文是“Code-language”而不是“Symbol-language”呢？这只能归咎于三年前的我——那时我在初中二年级，英语能力尚为浅薄，词汇量亦严重不足，因此译为如今的名称。三年之后，我也已经知道了“code”不是符号的意思，而是“代号、代码”。由于这三年间，这个错误的英文译名已经叫习惯了，“code”的本义中的“代号”也有一些我最初创立符语的初衷的意味，所以“Code-language”译名便一直沿用至今。<br><br>不知不觉又作一序。若你看到这里仍有学习符语的意向，那么请你翻开新的一页，更深入地探索符语体系吧。</p>
+		<p style="text-align: right">Clsh (5)[5, 0]<br>20 9, 2025 12:46</p>
+		<hr>
+		<p style="font-size: 0.7em;">注1：截止作序时为三年，当时使用的是第六版符语。</p>
+		<hr>
+		<h2>目录</h2>
+		<a href="#zfdvb">字符对照表</a><a style="float: right">1</a><br>
+		<a href="#ufdvb">数符对照表</a><a style="float: right">2</a><br>
+		<a href="#updvb">双拼对照表（小鹤方案）</a><a style="float: right">3</a><br>
+		<a href="#uuum">使用说明</a><a style="float: right">5</a><br>
+			<a href="#vw" style="padding-left: 10px;">中文</a><a style="float: right; padding-right: 10px;">5</a><br>
+			<a href="#yw" style="padding-left: 10px;">英文</a><a style="float: right; padding-right: 10px;">7</a><br>
+			<a href="#tygz" style="padding-left: 10px;">通用规则</a><a style="float: right; padding-right: 10px;">8</a><br>
+			<a href="#uz" style="padding-left: 20px;">数字（符语数字体系，CNS）</a><a style="float: right; padding-right: 20px;">10</a><br>
+			<a href="#xqyf" style="padding-left: 20px;">消歧语法</a><a style="float: right; padding-right: 20px;">12</a><br>
+		<a href="#gjfytx">高级符语体系（ACS）</a><a style="float: right">14</a><br>
+		<a href="#vyux">注意事项</a><a style="float: right">15</a><br>
+		<a href="#bqumjxx">版权声明及信息</a><a style="float: right">17</a><br>
+		<a href="#tgfkhjy">提供反馈和建议</a><a style="float: right">18</a><br>
+		<a href="#ldfyzfdvb">历代符语字符对照表</a><a style="float: right">19</a><br>
+		<a href="#gudfytx">过时的符语体系</a><a style="float: right">22</a><br>
+		<hr>
+		<h2>字符对照表</h2><a name="zfdvb"></a>
+		<table border="1" style="font-size: 1.25em">
+			<tr><td>Π</td><td>日</td><td>コ</td><td>╛</td><td>Ξ</td><td>ʃ</td><td>◁</td></tr>
+			<tr><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td></tr>
+			<tr><td>├</td><td>⊥</td><td>∠</td><td>Χ</td><td>Γ</td><td>ɜ</td><td>Λ</td></tr>
+			<tr><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td></tr>
+			<tr><td>▷</td><td>┐</td><td>></td><td>y</td><td>~</td><td>+</td><td>< </td></tr>
+			<tr><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td></tr>
+			<tr><td colspan="2">ϟ</td><td>m</td><td>Δ</td><td>▽</td><td>ྈ</td><td></td></tr>
+			<tr><td colspan="2">V(ü)</td><td>W</td><td>X</td><td>Y</td><td>Z</td><td></td></tr>
+			<tr><td colspan="5">中文声符（基础）</td></tr>
+			<tr><td>-</td><td>/</td><td>v</td><td>\</td><td>=</td><!--<td>	</td><td>	</td>--><tr>
+			<tr><td>一声</td><td>二声</td><td>三声</td><td>四声</td><td>轻声</td><!--<td>	</td><td>	</td>--></tr>
+			<tr><td colspan="5">（ACS）</td></tr>
+			<tr><td>-</td><td>┘</td><td>v</td><td>└</td><td>=</td><!--<td>	</td><td>	</td>--><tr>
+			<tr><td>一声</td><td>二声</td><td>三声</td><td>四声</td><td>轻声</td><!--<td>	</td><td>	</td>--></tr>
+		</table>
+		<hr>
+		<h2>数符对照表</h2><a name="ufdvb"></a>
+		<table border="1" style="font-size: 1.25em">
+			<tr><td>×</td><td>+</td><td>┌</td><td>Λ</td><td>┐</td></tr>
+			<tr><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+			<tr><td>></td><td>┘</td><td>v</td><td>└</td><td><</td></tr>
+			<tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+		</table>
+		<hr>
+		<h2>双拼对照表（小鹤方案）</h2><a name="updvb"></a>
+			<img src="https://flypy.cc/images/hejp.png" style="width: 100%; border-radius: 8px; box-shadow: 0 0 10px #666;" alt="图像加载失败，请访问小鹤音形官方网站查看对照表: https://flypy.cc/"></img>
+		<hr>
+			<h2>使用说明</h2><a name="uuum"></a>
+				<h3>中文</h3><a name="vw"></a>
+					<p>中文符语使用基于汉语拼音。因此你必须精通汉语拼音才能正确使用符语。</p>
+					<p>使用符语表达中文时，只需将汉字对应的混拼字母以对应字符替代即可。然而这样必然可能产生歧义，目前可用消歧语法初步解决该问题（见<a href="#xqyf">12页</a>)。</p>
+					<p>与汉语拼音不同的是，符语书写音节时音调（符语中称“声符”，下同）是标在音节之后的。</p>
+					<div class="b">电子版手册不提供使用示例。如果要查看使用示例，请查阅实体手册。</div>
+					<p>在书写语气词等通常读为轻声的文字时，必须在该字音节之后加上轻声声符“=”。</p>
+				<h3>变声字</h3>
+					<p>汉语中变声字经常出现。以“一”字举例：</p>
+					<center><a><strong>一(yí)个  一(yì)分钟  十一(yī)</strong></a></center>
+					<p>若出现此种情况，此时不能继续使用该字最原本的读音来书写，而应按照该字在该词语中的读音（即变声后的读音）来书写。</p>
+				<h3>儿话<span style="font-size: 0.75em;">(化)</span>音</h3>
+					<p>汉语口语中，儿话（化）音并不少见。这种口语在书面上也经常会得到体现（通常在文字后加上“儿”字）。在符语中，此现象的体现完全遵循汉语拼音规则，即在儿话（化）修饰的音节末尾、声符之前加上字符“y”（即字母“r”），而最后的声符只需跟在其后即可。</p>
+			<h2>英文</h2><a name="yw"></a>
+				<p>符语的本质实际上仅是对字符的替换，因此将符语应用于英文相对于中文而言会更加方便。然而这可能使得符语更容易被破解，所以我们建议不要轻易使用符语表示英文。该缺陷目前无有效的解决方法。</p>
+				<h3>大写字母</h3>
+					<p>大写字母是英文不可缺少的存在。为使符语适应大写字母规则，我们规定应在需大写的字符下方添加下划线。</p>
+				<h3>外来字母</h3>
+					<p>一些英文单词中含有外来字母（如cliché），而它们通常形态各异，将它们各个设计一个符语形态显然难以实现且不切实际。因此外来字母无需进行特殊处理，直接书写即可。此规则仅使用于英文。</p>
+			<h2>通用规则</h2><a name="tygz"></a>
+				<p>该部分的规则在中文、英文符语表述中均适用。</p>
+				<h3>连写</h3>
+					<p>对于中文而言，使用符语表述时必须连在一起写。部分符语初学者有将单个字的音节分开写的习惯，这时不被我们接受的。在表述中文连写时，进行阅读需要通过声符的位置来分隔出音节。</p>
+					<p>但在使用符语表述英文时，情况则完全不同。由于英语的基本体系为单词制若连在一起将变得几乎没有可读性。因此，在使用符语表达英文时，连写是绝对禁止的，应注意这一点。</p>
+				<h3>中英混用</h3>
+					<p>中文语境中或多或少都会出现一些夹杂英文的情况，我们称之为“中英混用”。例如：</p>
+					<center><strong><a>我得到了A评级。</a></strong></center>
+					<p>此种情况下在符语的中文表述中将会出现拼写错误，如果不作任何处理的话。为解决这一问题，我们规定将这类字符加上“插入符”来作特殊分割，并将其转化为符语形式。所谓“插入符”即一对大括号（或称“花括号”）“{}”。</p>
+					<p>需要注意的是，插入符之间的内容仍须遵守英文符语的使用规则。</p>
+				<h3>不常用字、词及书面语</h3>
+					<p>对于符语的中文表述而言，由于以汉语拼音为基础，而汉语拼音中一个音节大概率会有多于一个汉字与之对应，因此如果使用符语对这类字或词进行表述将很容易造成歧义。所以，我们很不推荐你在不是完全没有其他办法的情况下来用符语表述这一类字或词，应当简明易懂地表述。</p>
+					<p>在英文中，这种情况并不常见，但一旦出现可能会使人认为使用者犯了拼写错误，因此也应当尽量避免使用不常用词。</p>
+					<p>但如果实在没有其他方法，你可以使用消歧语法中的高级消歧语法来初步解决这一问题（见<a href="#xqyf">13页</a>）。</p>
+				<h3>数字</h3><a name="uz"></a>
+					<p>使用符语对数字进行表述时，应使用符语数字体系（Code-language Nums System, CNS）。该体系是使符语完全符号化的关键体系，旨在完全以符号的形式来表示数字。</p>
+					<p>CNS由欧洲的Alpha记数法获取灵感并对其加以改进，成为符语体系的一部分。要获取数字体系表，请查阅<a href="#ufdvb">第2页</a>。</p>
+					<p>使用CNS时，为防止其中一些数符与符语字符和声符产生冲突，我们引进了“数符区间”这一概念。所谓“数符区间”即一对竖线“||”，要表述的数符应当写在数符区间中。</p>
+					<p>有数字就会有修饰数字的符号。一些符号会与数符产生冲突（如加号、乘号等），对于这些符号则需使用消歧语法进行处理（详见<a href="#xqyf">12页</a>）；而不会与数符发生冲突的符号可用消歧语法进行处理，也可以选择不进行任何处理。需要注意的是，小数点、冒号、逗号不允许使用消歧语法处理，直接书写即可。</p>
+					<p>有一点需要格外注意：数符区间课题套在插入符中使用，但插入符绝对禁止套在数符区间中。直观表示如下：</p>
+					<center><strong><a style="color: #199;">正确: {||}</a><a>  </a><a style="color: #e44;">错误: |{}|</a></strong></center>
+				<h3>标点符号</h3>
+					<p>标点符号是文字书写的重要部分。对符语而言也是一样。符语中使用标点符号时无需进行处理，直接书写即可。然而部分符号会与符语字符产生冲突。对于这一类字符应使用消歧语法进行处理（见<a href="#xqyf">12页</a>）。</p>
+				<h3>消歧语法</h3><a name="xqyf"></a>
+					<p>消歧语法（原名“防歧义语法”）是第6版符语的更新产物，旨在减弱符语的歧义与混淆性。</p>
+					<p>符语的使用过程中有时会出现难以解决的冲突（如使用与符语字符冲突的符号），此时就应对产生冲突的符号（而非字符等符语符号）进行消歧（旧称“转义”）。只需在该符号之前加上消歧符“\”，并在其前加上撇好“'”来防止其与声符发生冲突，即可完成消歧。</p>
+					<p>如果出现批量连在一起的符号，无须将每个符号逐个消歧，只需在消歧符之后用消歧区间（即一对中括号“[]”）包括即可。</p>
+					<p>如果只对左半中括号“[”进行消歧处理，则应在消歧符之前书写两个撇号，无论其是否在插入符或数符区间中，而右半中括号仍安正常规则进行消歧。</p>
+					<p>除上述特殊情况外，在插入符或数符区间中进行的消歧处理的消歧符前无需加撇号。</p>
+					<p>若要对不常用字/词/书面语进行表述，则需对其进行高级消歧。高级消歧引入了完整的小鹤音形，官方网站：<a href="https://flypy.cc/">https://flypy.cc/</a>。</p>
+					<div class="b">高级消歧语法仅用于ACS，因难度较高，不面向初学者。</div>
+			<hr>
+			<h2>高级符语体系（ACS）</h2><a name="gjfytx"></a>
+				<p>高级符语体系（Advanced Code-language System, ACS）是符语的进阶版本，旨在使符语看起来更像一套密语或一门独立的语言。</p>
+				<p>ACS吸收了双拼输入，即第一个字母代表声母、第二个字母代表韵母的思想。ACS使用的双拼方案为小鹤方案。要获取小鹤双拼方案对照表，请查阅<a href="#updvb">第3页</a>。</p>
+				<p>ACS的其他语法规则[包括儿话（化）音]均与基础符语体系规则相同。</p>
+				<p>建议基础符语能力3级及以上者学习该体系。基础5级的学习者强制要求近修该体系。</p>
+				<p>请注意，ACS在使用时，二声和四声声符有发生变化。此外，在ACS中调用消歧语法需在基本消歧语法的基础上山区一个撇号。</p>
+			<hr>
+			<h2>注意事项</h2><a name="vyux"></a>
+				<p>我们已经提到过符语是一套密语体系，因此只能在书面表达并不应应用于正式场合。</p>
+				<h3>易混警示</h3>
+					<p>对于符语初学者而言，符语中字符、声符、数符之间都很容易混淆。因此初学者应多加细心，防止影响符语的正确使用。</p>
+				<h3>学习提示</h3>
+					<p>有关学习时长：通常来说，基础符语体系学习一周即可基本掌握。对于ACS如无双拼基础，则可能需一个月左右方能掌握。<br>因此，耐心为第一位。万事皆有过程。</p>
+				<h3>符语水平等级</h3>
+					<p>符语水平等级是衡量符语使用者对符语掌握程度的评级标准，在各项能力均分为5级，5级最高。一般情况下，小括号内的数字表示基础符语能力，中括号中第一个数字是高级符语体系能力，第二个数字是符语口语能力（现已不再使用）。如下：</p>
+					<center><strong><a>Clsh (5)[5, 0]</a></strong></center>
+					<p>请注意，“符语口语能力”是旧版本的遗留产物。现版本已将其移除。</p>
+					<div class="b">第5版手册不再提供符语能力评级参考标准。<br><br>若要查阅详细的评定参考标准，请访问：<a href="https://coolsigh.github.io/blog/code-language-levels" style="color: red;">https://coolsigh.github.io/blog/code-language-levels</a>。</div>
+			<hr>
+			<h2>版权声明及信息</h2><a name="bqumjxx"></a>
+				<code>Code-language © Copyright 2022-2026<br>
+				
+				Code-language Guide © Copyright 2023-2026<br>
+				
+				All rights reserved. 保留所有权利。</code>
+				<br><br>
+				<a>版权持有者：Clsh<br>参与编辑者：Clsh<br><br>版权所有，侵权必究。</a>
+				<br>
+				<a>符号语言 当前版本：<code>7.16.1 formal</code><br>符号语言语法规则 当前版本：<code>16.1</code><br>高级符语体系 当前版本：<code>2.1</code></a><br>
+				<p><strong>声明：</strong><br><br>小鹤双拼、小鹤音形的著作权属于小鹤音形官方，符号语言不拥有其任何著作权。</p>
+				<p>小鹤音形官方网站：<a href="https://flypy.cc/">https://flypy.cc/</a>，<br>所有者：散步的鹤</p>
+			<hr>
+			<h2>提供反馈和建议</h2><a name="tgfkhjy"></a>
+				<p>我们欢迎你来向我们提供反馈和建议！我们十分希望了解你的想法。这有助于我们更好地改进符语体系。</p>
+				<p>通过 电子邮件：<a href="mailto:clsh248163@outlook.com">clsh248163@outlook.com</a></p>
+				<p>通过 Stoat：<code>Tag: Clsh#1030</code></p>
+			<hr>
+			<h2>历代符语字符对照表</h2><a name="ldfyzfdvb"></a>
+				<div class="b">请查阅实体手册。</div>
+			<hr>
+			<h2>过时的符语体系</h2><a name="gudfytx"></a>
+				<div class="b">请查阅实体手册。</div>
+			</div>
+		</div>
+	</body>
+
+</html>
